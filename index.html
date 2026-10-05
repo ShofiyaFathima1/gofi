@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Story — A Digital Scrapbook & Friendship Timeline</title>
+  <meta name="description" content="A dreamy soft pastel digital scrapbook and timeline celebrating memories, laughter, and an unforgettable journey together.">
+  <meta name="theme-color" content="#FAF7F2">
+  
+  <!-- Favicon / Icon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌸</text></svg>">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Background Particle Animation Canvas -->
+  <canvas id="particles-canvas" aria-hidden="true"></canvas>
+
+  <!-- Top Sticky Navigation Bar -->
+  <header class="top-header" role="banner">
+    <div class="brand-badge">
+      <span class="heart-icon">♥</span>
+      <span>Our Memory Journal</span>
+    </div>
+    <div class="nav-controls">
+      <button id="toggle-particles-btn" class="nav-pill-btn" aria-label="Toggle floating hearts and petals">
+        <span>✨</span> <span>Petals</span>
+      </button>
+      <button id="header-music-btn" class="nav-pill-btn" aria-label="Jump to music player">
+        <span>🎵</span> <span>Our Song</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         OPENING SCREEN (Cinematic Intro)
+         ========================================================================== -->
+    <section class="hero-screen" id="hero-section">
+      <div class="hero-content">
+        <div class="hero-washi-tape" aria-hidden="true"></div>
+        <span class="hero-tagline-pre">a personal scrapbook</span>
+        <h1 class="hero-title">OUR STORY</h1>
+        <p class="hero-subtitle">two people, one timeline, countless memories.</p>
+        <button id="begin-story-btn" class="hero-btn" type="button">
+          <span>BEGIN OUR STORY</span>
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+
+      <div class="hero-scroll-cue" aria-hidden="true">
+        <span>Scroll to explore</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TIMELINE CONTAINER
+         ========================================================================== -->
+    <div class="timeline-container" id="timeline-flow">
+      <!-- Thin vertical spine connecting all chapters -->
+      <div class="timeline-spine" aria-hidden="true"></div>
+      <div class="timeline-progress" id="timeline-progress-bar" aria-hidden="true"></div>
+
+      <!-- ==========================================================================
+           CHAPTER 01 — FEBRUARY 9, 2024
+           ========================================================================== -->
+      <article class="chapter-section" id="chapter-1" data-date="09.02.2024">
+        <div class="timeline-node" aria-hidden="true">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-stamp">09.02.2024</div>
+        </div>
+
+        <div class="chapter-content-grid">
+          <!-- Text Journal Card -->
+          <div class="scrapbook-card">
+            <div class="washi-tape-strip tape-left" aria-hidden="true"></div>
+            <div class="card-stamp-badge">Chap. 01</div>
+            
+            <span class="chapter-number-label">Chapter 01</span>
+            <h2 class="chapter-title">THE FIRST TIME WE MET</h2>
+            <div class="chapter-date-badge">February 9, 2024</div>
+
+            <p>Technically, I had known of him before this day.</p>
+            <p>Not as Gokulraj, but as the Class Representative of 1st Year CSE (IoT).</p>
+            <p>I had heard stories about him—about his character, the way he carried himself, and the kind of person he was.</p>
+            <p>Without even properly knowing him, I had already developed a huge respect for him.</p>
+            <p>Then came February 9, 2024.</p>
+            <p>I finally got a chance to meet him.</p>
+            <p>I was actually eager to meet him, but our first meeting wasn't exactly the movie-scene moment I had imagined.</p>
+            <p class="emotional-italic">It lasted for barely three seconds.</p>
+            <p class="emotional-italic">But somehow, those three seconds became the beginning of our story.</p>
+
+            <div class="playful-caption-sticker">
+              <span>3 seconds. That's it. 😭</span>
+            </div>
+          </div>
+
+          <!-- Polaroid Photo Mount -->
+          <div class="polaroid-wrapper">
+            <figure class="polaroid-frame" data-modal-title="The First Encounter • 09.02.2024" data-modal-caption="Barely 3 seconds in the hallway... that's it. 😭">
+              <div class="polaroid-photo">
+                <img src="assets/images/first_meet.jpg" alt="Aesthetic watercolor scrapbook illustration of the first hallway encounter" loading="lazy" id="img-polaroid-ch1">
+                <label class="photo-replace-prompt" title="Replace with your own photo">
+                  <span>📷 Change photo</span>
+                  <input type="file" accept="image/*" class="custom-photo-uploader" data-target="img-polaroid-ch1" style="display:none;">
+                </label>
+              </div>
+              <figcaption class="polaroid-caption">09.02.2024 • 3 Seconds Encounter</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==========================================================================
+           CHAPTER 02 — FEBRUARY 10, 2024
+           ========================================================================== -->
+      <article class="chapter-section" id="chapter-2" data-date="10.02.2024">
+        <div class="timeline-node" aria-hidden="true">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-stamp">10.02.2024</div>
+        </div>
+
+        <div class="chapter-content-grid">
+          <!-- Text Journal Card -->
+          <div class="scrapbook-card">
+            <div class="washi-tape-strip tape-right" aria-hidden="true"></div>
+            <div class="card-stamp-badge">Chap. 02</div>
+
+            <span class="chapter-number-label">Chapter 02</span>
+            <h2 class="chapter-title">A STRANGER TEXTED ME</h2>
+            <div class="chapter-date-badge">February 10, 2024</div>
+
+            <p>The very next day, he texted me.</p>
+            <p>And that's where everything really began.</p>
+            <p>We started as complete strangers.</p>
+            <p class="emotional-italic">Just two people talking.</p>
+
+            <!-- Animated Progression Ladder -->
+            <div class="comm-progression" aria-label="Progression of conversations">
+              <div class="comm-step">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                <span>REELS</span>
+              </div>
+              <div class="comm-arrow">↓</div>
+
+              <div class="comm-step">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path><path d="M19 10v2a7 7 0 0 1-14 0v-2"></path><line x1="12" y1="19" x2="12" y2="23"></line><line x1="8" y1="23" x2="16" y2="23"></line></svg>
+                <span>VOICE NOTES</span>
+              </div>
+              <div class="comm-arrow">↓</div>
+
+              <div class="comm-step">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"></polygon><rect x="1" y="5" width="15" height="14" rx="2" ry="2"></rect></svg>
+                <span>INSTAGRAM CALLS</span>
+              </div>
+              <div class="comm-arrow">↓</div>
+
+              <div class="comm-step">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                <span>NUMBER EXCHANGE</span>
+              </div>
+              <div class="comm-arrow">↓</div>
+
+              <div class="comm-step">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                <span>PHONE CALLS</span>
+              </div>
+            </div>
+
+            <!-- Reveal Highlight -->
+            <div class="great-listener-callout">
+              <p>Somewhere along the way...</p>
+              <div class="highlight-great-listener">I realized I had found a GREAT LISTENER.</div>
+            </div>
+          </div>
+
+          <!-- Decorative Scrapbook Note side -->
+          <div class="polaroid-wrapper">
+            <div class="scrapbook-card" style="width: 100%; max-width: 380px; text-align: center; background: rgba(254, 250, 246, 0.98);">
+              <div class="washi-tape-strip tape-sage" style="top:-12px; left:50%; transform:translateX(-50%);" aria-hidden="true"></div>
+              <div style="font-family: var(--font-diary); font-size: 1.5rem; color: var(--dusty-rose-deep); margin-bottom: 1rem;">
+                "From a random message to late night conversations..."
+              </div>
+              <div style="font-size: 2.8rem; margin-bottom: 0.8rem;">💌 🎙️ 📱</div>
+              <p style="font-family: var(--font-serif); font-style: italic; color: var(--ink-secondary); font-size: 1.05rem;">
+                Every notification began to mean a little more.
+              </p>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==========================================================================
+           CHAPTER 03 — THE FRIENDSHIP ERA
+           ========================================================================== -->
+      <article class="chapter-section" id="chapter-3" data-date="Friendship Era">
+        <div class="timeline-node" aria-hidden="true">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-stamp">Friendship Era</div>
+        </div>
+
+        <div class="chapter-content-grid">
+          <!-- Text Journal Card -->
+          <div class="scrapbook-card">
+            <div class="washi-tape-strip tape-left" aria-hidden="true"></div>
+            <div class="card-stamp-badge">Chap. 03</div>
+
+            <span class="chapter-number-label">Chapter 03</span>
+            <h2 class="chapter-title">AND THEN WE GOT CLOSER</h2>
+            <div class="chapter-date-badge">The Golden Friendship Era</div>
+
+            <p>The more we talked, the closer we became.</p>
+            <p>There were countless conversations, random calls, reels, voice notes, jokes and memories.</p>
+            <p class="emotional-italic">Our friendship became so goated. 😭</p>
+            <p>Of course... we weren't exactly peaceful.</p>
+
+            <!-- Playful Animated Stat Cards -->
+            <div class="friendship-stats-grid">
+              <div class="stat-badge-card">
+                <span class="stat-emoji-val">📈</span>
+                <span class="stat-label-title">Fighting</span>
+                <div class="stat-mini-bar">
+                  <div class="stat-mini-fill" style="width: 88%;"></div>
+                </div>
+              </div>
+
+              <div class="stat-badge-card">
+                <span class="stat-emoji-val">📈</span>
+                <span class="stat-label-title">Annoying each other</span>
+                <div class="stat-mini-bar">
+                  <div class="stat-mini-fill" style="width: 95%;"></div>
+                </div>
+              </div>
+
+              <div class="stat-badge-card">
+                <span class="stat-emoji-val">0%</span>
+                <span class="stat-label-title">Giving up on each other</span>
+                <div class="stat-mini-bar">
+                  <div class="stat-mini-fill fill-zero"></div>
+                </div>
+              </div>
+            </div>
+
+            <p>I started fighting with him a lot.</p>
+            <p>Sometimes I tortured him with my nonsense too.</p>
+            <p>But the one thing that stayed constant was this:</p>
+            <p class="emotional-italic">He never gave up on me.</p>
+            <p>And honestly?</p>
+            <p class="emotional-italic">I wasn't ready to give up on him either.</p>
+          </div>
+
+          <!-- Scrapbook Memory Collage Pin -->
+          <div class="polaroid-wrapper">
+            <figure class="polaroid-frame tilt-right" data-modal-title="Friendship Era Collage" data-modal-caption="Countless jokes, reels, silly fights, and 0% giving up.">
+              <div class="polaroid-photo">
+                <div style="width:100%; height:100%; background: linear-gradient(135deg, #FDE8E1 0%, #E8E0F2 100%); display:flex; flex-direction:column; justify-content:center; align-items:center; padding:1.5rem; text-align:center;">
+                  <span style="font-size:3.5rem; margin-bottom:0.75rem;">🧸 ✨ 🧋</span>
+                  <div style="font-family:var(--font-diary); font-size:1.6rem; color:var(--dusty-rose-deep); line-height:1.3;">
+                    "Our friendship became so goated. 😭"
+                  </div>
+                  <div style="font-family:var(--font-serif); font-style:italic; font-size:0.95rem; color:var(--ink-secondary); margin-top:0.5rem;">
+                    Through every silly argument & midnight banter
+                  </div>
+                </div>
+              </div>
+              <figcaption class="polaroid-caption">Friendship Era • Certified Goated</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==========================================================================
+           CHAPTER 04 — FEBRUARY 25, 2026 (VISUALLY DIFFERENT & EMOTIONAL)
+           ========================================================================== -->
+      <article class="chapter-section chapter-proper-meet" id="chapter-4" data-date="25.02.2026">
+        <div class="timeline-node" aria-hidden="true">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-stamp">25.02.2026</div>
+        </div>
+
+        <div class="chapter-content-grid">
+          <!-- Text Journal Card -->
+          <div class="scrapbook-card">
+            <div class="washi-tape-strip tape-right" aria-hidden="true"></div>
+            <div class="card-stamp-badge">Chap. 04</div>
+
+            <span class="chapter-number-label">Chapter 04</span>
+            <h2 class="chapter-title">THE FIRST PROPER MEET</h2>
+            <div class="chapter-date-badge">February 25, 2026</div>
+
+            <p>After all those years of knowing each other...</p>
+            <p>We finally got another chance to meet.</p>
+            <p>And this time?</p>
+            <p class="emotional-italic">It was an actual meeting.</p>
+            <p>No three-second encounter.</p>
+            <p>No awkward little moment.</p>
+            <p class="emotional-italic">We actually met.</p>
+
+            <!-- Line by Line Sequence -->
+            <div class="meet-reveals-sequence">
+              <div class="reveal-line-card">
+                <span class="reveal-dot-accent"></span>
+                <span>"He was so handsome."</span>
+              </div>
+              <div class="reveal-line-card">
+                <span class="reveal-dot-accent"></span>
+                <span>"He was so responsible."</span>
+              </div>
+              <div class="reveal-line-card">
+                <span class="reveal-dot-accent"></span>
+                <span>"And me?"</span>
+              </div>
+            </div>
+
+            <!-- Brain.exe Stopped Working Banner -->
+            <div class="brain-stopped-banner">
+              <div class="brain-stopped-title">
+                <span>⚠️</span>
+                <span>BRAIN.EXE HAS STOPPED WORKING 😭</span>
+              </div>
+              <div class="brain-stopped-subtitle">total speechless moment</div>
+            </div>
+
+            <p>He brought me chocolates, drinks and balloons.</p>
+            <p class="emotional-italic">And somehow, after everything we'd been through as friends, that moment became one of those memories I'll always keep.</p>
+          </div>
+
+          <!-- Scrapbook Keepsakes Grid (Photo Together, Chocolates, Balloons, Drinks) -->
+          <div>
+            <!-- Main Photo Together Polaroid -->
+            <div class="polaroid-wrapper" style="margin-bottom: 1.5rem;">
+              <figure class="polaroid-frame" data-modal-title="The Proper Meet • 25.02.2026" data-modal-caption="The actual meeting. He brought chocolates, drinks and balloons.">
+                <div class="polaroid-photo">
+                  <img src="assets/images/proper_meet.jpg" alt="Aesthetic polaroid of a boy and girl walking happily together along the road" loading="lazy" id="img-polaroid-ch4-main">
+                  <label class="photo-replace-prompt" title="Replace with your own photo">
+                    <span>📷 Change photo</span>
+                    <input type="file" accept="image/*" class="custom-photo-uploader" data-target="img-polaroid-ch4-main" style="display:none;">
+                  </label>
+                </div>
+                <figcaption class="polaroid-caption">25.02.2026 • When We Actually Met</figcaption>
+              </figure>
+            </div>
+
+            <!-- Mini Keepsakes Grid: Chocolates, Drinks, Balloons -->
+            <div class="keepsakes-scrapbook-grid">
+              <div class="keepsake-mini-card" data-modal-title="The Sweet Gifts" data-modal-caption="Chocolates, drinks and pastel balloons.">
+                <div class="keepsake-img-box">
+                  <img src="assets/images/gifts_surprise.jpg" alt="Chocolates, drinks and balloons gift arrangement" id="img-keepsake-gifts">
+                </div>
+                <div class="keepsake-tag">🍫 Chocolates & 🥤 Drinks</div>
+              </div>
+
+              <div class="keepsake-mini-card" data-modal-title="Pastel Balloons & Little Surprises" data-modal-caption="Floating balloons, sweet memories, and happy moments.">
+                <div class="keepsake-img-box" style="display:flex; justify-content:center; align-items:center; background:linear-gradient(135deg, #F8E3DE, #E8E0F2);">
+                  <div style="font-size:3rem; line-height:1;">🎈 ✨ 🌸</div>
+                </div>
+                <div class="keepsake-tag">🎈 Pastel Balloons</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ==========================================================================
+           CHAPTER 05 — TODAY
+           ========================================================================== -->
+      <article class="chapter-section" id="chapter-5" data-date="Today">
+        <div class="timeline-node" aria-hidden="true">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date-stamp">Today</div>
+        </div>
+
+        <div class="chapter-content-grid">
+          <!-- Text Journal Card -->
+          <div class="scrapbook-card">
+            <div class="washi-tape-strip tape-left" aria-hidden="true"></div>
+            <div class="card-stamp-badge">Chap. 05</div>
+
+            <span class="chapter-number-label">Chapter 05</span>
+            <h2 class="chapter-title">STILL US</h2>
+            <div class="chapter-date-badge">Present Day & Always</div>
+
+            <p>From a three-second meeting...</p>
+
+            <!-- Journey chips -->
+            <div class="journey-staircase">
+              <span class="journey-step-chip">to a simple text...</span>
+              <span class="journey-connector-arrow">→</span>
+              <span class="journey-step-chip">to reels...</span>
+              <span class="journey-connector-arrow">→</span>
+              <span class="journey-step-chip">to voice notes...</span>
+              <span class="journey-connector-arrow">→</span>
+              <span class="journey-step-chip">to Instagram calls...</span>
+              <span class="journey-connector-arrow">→</span>
+              <span class="journey-step-chip">to phone calls...</span>
+              <span class="journey-connector-arrow">→</span>
+              <span class="journey-step-chip">to years of friendship...</span>
+              <span class="journey-connector-arrow">→</span>
+              <span class="journey-step-chip">to finally meeting properly...</span>
+            </div>
+
+            <p class="emotional-italic">We've come a long way.</p>
+
+            <p>Our story hasn't always been perfect.</p>
+
+            <div class="truth-lines-box">
+              <p>We've fought.</p>
+              <p>We've annoyed each other.</p>
+              <p>We've hurt each other.</p>
+              <p>We've laughed.</p>
+              <p>We've stayed.</p>
+            </div>
+
+            <p>And somehow, through all of it...</p>
+            <p class="emotional-italic" style="font-size:1.3rem; color:var(--dusty-rose-deep);">
+              our friendship is still continuing.
+            </p>
+          </div>
+
+          <!-- Peaceful Memory Visual -->
+          <div class="polaroid-wrapper">
+            <figure class="polaroid-frame" data-modal-title="Still Us • Today" data-modal-caption="Through all the laughs, calls, and memories... still us.">
+              <div class="polaroid-photo">
+                <div style="width:100%; height:100%; background: linear-gradient(135deg, #FAF7F2 0%, #FCE6DC 50%, #E8E0F2 100%); display:flex; flex-direction:column; justify-content:center; align-items:center; padding:1.5rem; text-align:center;">
+                  <span style="font-size:3.2rem; margin-bottom:0.75rem;">🕊️ 🤍 ☕</span>
+                  <div style="font-family:var(--font-diary); font-size:1.6rem; color:var(--ink-primary); line-height:1.3;">
+                    "We've stayed."
+                  </div>
+                  <div style="font-family:var(--font-serif); font-style:italic; font-size:1rem; color:var(--ink-secondary); margin-top:0.5rem;">
+                    From strangers to an irreplaceable bond
+                  </div>
+                </div>
+              </div>
+              <figcaption class="polaroid-caption">Present Day • Countless Memories</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+    </div> <!-- End timeline-container -->
+
+    <!-- ==========================================================================
+         FINAL CHAPTER — TO BE CONTINUED (Soft Pastel Sunset Gradient)
+         ========================================================================== -->
+    <section class="final-chapter-section" id="final-chapter">
+      <div class="final-sunset-polaroid">
+        <figure class="polaroid-frame" data-modal-title="To Be Continued..." data-modal-caption="Because our story is still being written.">
+          <div class="polaroid-photo">
+            <img src="assets/images/sunset_memory.jpg" alt="Dreamy soft pastel sunset illustration" loading="lazy" id="img-polaroid-sunset">
+            <label class="photo-replace-prompt" title="Replace with your own photo">
+              <span>📷 Change photo</span>
+              <input type="file" accept="image/*" class="custom-photo-uploader" data-target="img-polaroid-sunset" style="display:none;">
+            </label>
+          </div>
+          <figcaption class="polaroid-caption">A Sunset Yet Unfinished 🌅</figcaption>
+        </figure>
+      </div>
+
+      <h2 class="final-title">TO BE CONTINUED...</h2>
+
+      <div class="final-body-text">
+        <p>This isn't the end of our story.</p>
+        <p>
+          There are still so many conversations we haven't had,<br>
+          so many places we haven't gone,<br>
+          so many memories we haven't made.
+        </p>
+        <p>So I'll leave this chapter unfinished...</p>
+        <p style="font-weight:600; color:var(--ink-primary);">Because our story is still being written.</p>
+        <p style="margin-top:1.5rem; font-family:var(--font-diary); font-size:1.8rem; color:var(--dusty-rose-deep);">
+          In Sha Allah, there are many more chapters waiting for us. 🤍
+        </p>
+      </div>
+
+      <div class="final-quote-bold">
+        ONE DAY, WE'LL LOOK BACK AT THIS.
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         MUSIC REVEAL & AUDIO PLAYER CARD
+         ========================================================================== -->
+    <section class="music-reveal-card" id="music-reveal-section">
+      <div class="washi-tape-strip tape-sage" style="top:-12px; left:50%; transform:translateX(-50%);" aria-hidden="true"></div>
+      
+      <div class="music-teaser-text">One last thing...</div>
+
+      <button id="play-our-song-btn" class="play-song-btn" type="button">
+        <span id="play-btn-icon">▶</span>
+        <span id="play-btn-text">PLAY OUR SONG</span>
+      </button>
+
+      <!-- Vinyl Disc & Interactive Player Controls -->
+      <div class="player-interface" id="player-interface-wrapper">
+        <div class="vinyl-disc-container">
+          <div class="vinyl-disc" id="vinyl-disc">
+            <div class="vinyl-grooves" aria-hidden="true"></div>
+            <div class="vinyl-center-label">
+              <span>Poraney<br>Poraney</span>
+            </div>
+            <div class="vinyl-center-hole" aria-hidden="true"></div>
+          </div>
+        </div>
+
+        <div class="song-meta-info">
+          <div class="song-title-label">Poraney Poraney</div>
+          <div class="song-artist-label">Our Soundtrack • Memory Journal</div>
+        </div>
+
+        <!-- Custom Audio Element -->
+        <audio id="main-audio" preload="metadata">
+          <source src="assets/audio/poraney-poraney.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+
+        <!-- Player Controls Row -->
+        <div class="player-controls-row">
+          <button id="audio-rewind-btn" class="control-icon-btn" title="Rewind 10 seconds" aria-label="Rewind 10 seconds">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="11 17 6 12 11 7"></polyline><polyline points="18 17 13 12 18 7"></polyline></svg>
+          </button>
+
+          <button id="audio-toggle-btn" class="control-icon-btn play-toggle-btn" title="Play or pause" aria-label="Play or pause audio">
+            <span id="audio-toggle-icon">▶</span>
+          </button>
+
+          <button id="audio-forward-btn" class="control-icon-btn" title="Forward 10 seconds" aria-label="Forward 10 seconds">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="13 17 18 12 13 7"></polyline><polyline points="6 17 11 12 6 7"></polyline></svg>
+          </button>
+        </div>
+
+        <!-- Progress Track -->
+        <div class="player-progress-container">
+          <div class="progress-bar-track" id="audio-progress-track">
+            <div class="progress-bar-fill" id="audio-progress-fill"></div>
+          </div>
+          <div class="player-timestamps">
+            <span id="audio-current-time">0:00</span>
+            <span id="audio-total-time">--:--</span>
+          </div>
+        </div>
+
+        <!-- Graceful audio placeholder note / custom audio loader -->
+        <div class="audio-source-notice" id="audio-status-box">
+          <span id="audio-status-message">Add your Poraney Poraney audio file here:</span>
+          <label class="audio-file-input-label">
+            <span>📁 Choose Audio File</span>
+            <input type="file" id="user-audio-file-input" accept="audio/*" style="display:none;">
+          </label>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FINAL FULLSCREEN MEMORY SCREEN (Revealed when music begins)
+       ========================================================================== -->
+  <aside class="fullscreen-memory-overlay" id="fullscreen-memory-overlay" role="dialog" aria-modal="true" aria-label="Memory closing message">
+    <div class="memory-overlay-content">
+      <div style="font-size:3.5rem; margin-bottom:1.5rem; animation: pulseBeat 3s infinite ease-in-out;">🌸</div>
+      <h2 class="memory-closing-line-1">and this is where our next chapter begins. 🤍</h2>
+      <span class="memory-closing-line-2">In Sha Allah.</span>
+      
+      <div>
+        <button id="close-fullscreen-overlay-btn" class="return-to-scrapbook-btn" type="button">
+          <span>Explore Scrapbook with Music ✦</span>
+        </button>
+      </div>
+    </div>
+  </aside>
+
+  <!-- ==========================================================================
+       PHOTO LIGHTBOX MODAL
+       ========================================================================== -->
+  <div class="photo-lightbox-modal" id="photo-lightbox-modal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="lightbox-card">
+      <button class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Close modal">&times;</button>
+      <div class="lightbox-img-wrapper">
+        <img src="" alt="" id="lightbox-modal-img">
+      </div>
+      <div class="lightbox-caption-text" id="lightbox-modal-caption"></div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/app.js"></script>
+</body>
+</html>
